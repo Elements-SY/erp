@@ -18,8 +18,8 @@
 ##### PackTools: [Webpack](https://www.webpackjs.com/) 
 
 ### 简介
-
-Vue-Element-Admin-System管理系统集成ect<img width="30" src="./src/assets/images/funny.png" alt="smile ">自己去看懒地写
+目前Vue3并不支持ElementUI所以会报错，我们静待ElementUI support Vue3
+Vue-Element-Admin-System管理系统集成ect<img width="30" src="./src/assets/images/icon/funny.png" alt="smile ">自己去看懒地写
 
 ## Project setup
 ```
