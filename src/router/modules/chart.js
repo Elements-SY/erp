@@ -20,6 +20,15 @@ export default [
                title: 'Chart'
             }
          },
+         {
+            path: '/chart/echarts',
+            name: 'echarts',
+            component: () => import('@/views/chart/echarts'),
+            meta: {
+               request: true,
+               title: 'Echarts'
+            }
+         },
       ]
    },
 

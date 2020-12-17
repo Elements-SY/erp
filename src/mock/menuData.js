@@ -39,6 +39,16 @@ export default [
             icon: 'icon-typescript',
             children: []
          }, {
+            path: '/upload',
+            title: 'Upload',
+            icon: 'icon-shangchuan',
+            children: []
+         }, {
+            path: '/download',
+            title: 'Download',
+            icon: 'icon-xiazai1',
+            children: []
+         }, {
             path: '/FrameWork',
             title: 'FrameWork',
             icon: 'icon-framework',
@@ -50,7 +60,7 @@ export default [
                },
                {
                   path: '/FrameWork/vue-cli',
-                  title: 'vue-cli',
+                  title: 'Vue-Cli',
                   icon: 'icon-jichengrenwu',
                },
                {
@@ -75,10 +85,26 @@ export default [
             icon: 'icon-babel',
             children: []
          }, {
-            path: '/eslint',
+            path: '/Eslint',
             title: 'ESLint',
             icon: 'icon-eslint',
             children: []
+         },{
+            path: '/Excel',
+            title: 'Excel',
+            icon: 'icon-export_excel',
+            children: [
+               {
+                  path: '/Excel/export',
+                  title: 'Export',
+                  icon: 'icon-export-file',
+               }, 
+               {
+                  path: '/Excel/import',
+                  title: 'Import',
+                  icon: 'icon-share2',
+               },
+            ]
          }, {
             path: '/npm',
             title: 'NPM',
@@ -113,23 +139,40 @@ export default [
             path: '/chart',
             title: 'Chart',
             icon: 'icon-Charts',
-            children: []
+            children: [
+               {
+                  path: '/chart/echarts',
+                  title: 'Echarts',
+                  icon: 'icon-Charts',
+               }
+            ]
          }, {
             path: '/map',
             title: 'The Map',
             icon: 'icon-map1',
-            children: []
+            children: [
+               {
+                  path: '/map/baidu',
+                  title: 'Baidu Map',
+                  icon: 'icon-baiduMaps',
+               },
+               {
+                  path: '/map/gaode',
+                  title: 'Gaode Map',
+                  icon: 'icon-mapOfGaud',
+               },
+            ]
          }, {
             path: '/plug-in',
             title: 'Plug-in',
             icon: 'icon-library1',
             children: []
-         }, 
+         },
          {
             path: '/interview',
             title: 'Interview',
             icon: 'icon-library',
-            children: [] 
+            children: []
          }, {
             path: '/WMAP',
             title: 'WMAP',

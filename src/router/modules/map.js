@@ -20,6 +20,24 @@ export default [
                title: 'The Map'
             }
          },
+         {
+            path: '/map/baidu',
+            name: 'baidu-maps',
+            component: () => import('@/views/map/baidu'),
+            meta: {
+               request: true,
+               title: 'Baidu Map'
+            }
+         },
+         {
+            path: '/map/gaode',
+            name: 'gaode-map',
+            component: () => import('@/views/map/gaode'),
+            meta: {
+               request: true,
+               title: 'Gaode Map'
+            }
+         },
       ]
    },
 

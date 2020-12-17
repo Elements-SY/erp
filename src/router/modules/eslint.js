@@ -1,20 +1,20 @@
 /* Layout */
 import mainLayout from '@/components/mainLayout'
-// eslintRouter
+// ESlintRouter
 export default [
    {
-      path: '/eslint',
+      path: '/ESlint',
       name: 'eslint',
       component: mainLayout,
-      redirect: '/eslint/index',
+      redirect: '/ESlint/index',
       meta: {
          request: true
       },
       children: [
          {
-            path: '/eslint/index',
+            path: '/ESlint/index',
             name: 'eslint_index',
-            component: () => import('@/views/eslint'),
+            component: () => import('@/views/ESlint'),
             meta: {
                request: true,
                title: 'ESlint'

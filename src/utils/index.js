@@ -45,7 +45,7 @@ export function parseTime(time, cFormat) {
   const time_str = format.replace(/{([ymdhisa])+}/g, (result, key) => {
     const value = formatObj[key]
     // Note: getDay() returns 0 on Sunday
-    if (key === 'a') { return ['日', '一', '二', '三', '四', '五', '六'][value ] }
+    if (key === 'a') { return ['日', '一', '二', '三', '四', '五', '六'][value] }
     return value.toString().padStart(2, '0')
   })
   return time_str
@@ -254,7 +254,7 @@ export function getTime(type) {
 export function debounce(func, wait, immediate) {
   let timeout, args, context, timestamp, result
 
-  const later = function() {
+  const later = function () {
     // 据上一次触发时间间隔
     const last = +new Date() - timestamp
 
@@ -271,7 +271,7 @@ export function debounce(func, wait, immediate) {
     }
   }
 
-  return function(...args) {
+  return function (...args) {
     context = this
     timestamp = +new Date()
     const callNow = immediate && !timeout
@@ -360,29 +360,50 @@ export function removeClass(ele, cls) {
 // 容错处理
 export const faultTolerance = {
   isArr: function (arr) {
-     if (arr !== null && arr.length) {
-        return arr
-     } else {
-        return []
-     }
+    if (arr !== null && arr.length) {
+      return arr
+    } else {
+      return []
+    }
   },
   isString: function (str) {
-     if (str !== null && str.length) {
-        return str
-     } else {
-        return ''
-     }
+    if (str !== null && str.length) {
+      return str
+    } else {
+      return ''
+    }
   },
   isJson: function (json) {
-     if (json !== null && JSON.stringify(json) !== "{}") {
-        return json
-     } else {
-        return null
-     }
+    if (json !== null && JSON.stringify(json) !== "{}") {
+      return json
+    } else {
+      return null
+    }
   },
   isNumber: function (value) {
-     if (Number(value)) {
-        return Number(value)
-     }
+    if (Number(value)) {
+      return Number(value)
+    }
   }
+}
+
+/* 读取文件 */
+export const readFile = (file) => {
+  // XLSX 使用文档链接入口：https://docs.sheetjs.com/
+  const XLSX = require('xlsx')
+  return new Promise(resolve => {
+    let reader = new FileReader()
+    reader.readAsBinaryString(file) // 开始读取二进制文件内容数据
+    // console.log("读取二进制文件原始数据",file)
+    reader.onload = ev => {
+      // console.log(ev.target.result) // 将二进制文件内容数据转换成xml
+      let workBook = XLSX.read(ev.target.result, {
+        type: "binary", // binary、buffer、array
+        cellDates: true, // 是否将日期存储为类型d（默认为n） 
+      });
+      let workSheet = workBook.Sheets[workBook.SheetNames[0]];
+      const data = XLSX.utils.sheet_to_json(workSheet); // 转换成json表格形式
+      resolve(data)
+    }
+  })
 }

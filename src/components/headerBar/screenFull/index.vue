@@ -6,13 +6,13 @@
         <img
           v-if="isFullVal"
           key="contract"
-          src="../../../assets/images/icon_contract.png"
+          src="@/assets/images/icon/icon_contract.png"
           class="icon-full-screen"
         />
         <img
           v-else
           key="expand"
-          src="../../../assets/images/icon_expand.png"
+          src="@/assets/images/icon/icon_expand.png"
           class="icon-full-screen"
         />
       </el-tooltip>

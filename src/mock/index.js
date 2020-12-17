@@ -5,6 +5,7 @@ import MockAdapter from 'axios-mock-adapter'
 import api from '../http/common';
 import userAccount from './userAccount'
 import menuData from './menuData'
+
 // let APIHOST = 'https://api.6vzz.com'
 // axios.defaults.baseURL = APIHOST
 // axios.defaults.timeout = 10000

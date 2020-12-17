@@ -9,8 +9,7 @@ const modules = modulesFiles.keys().reduce((modules, modulePath) => {
    return value.default
 }, {})
 let router = route.reduce((a, b) => a.concat(b));
-
 export default createRouter({
    history: createWebHashHistory(),
-   router
+   routes: router,
 })

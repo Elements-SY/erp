@@ -27,8 +27,10 @@ if (getCookie() !== undefined) {
   state.job = accountInfo.job
   state.hobby = accountInfo.hobby
   state.tel = accountInfo.tel
-  state.role = accountInfo.role
   state.avatars = accountInfo.avatars
+  state.role = accountInfo.role
+  state.token = accountInfo.token
+  // console.log(state)
 }
 const getters = {
   userName: state => state.userName,
@@ -36,6 +38,7 @@ const getters = {
   avatars: state => state.avatars,
   job: state => state.job,
   hobby: state => state.hobby,
+  token: state => state.token,
 };
 
 const mutations = {

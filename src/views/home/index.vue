@@ -1,24 +1,12 @@
 <template>
   <div class="home_container">
-    <el-row style="background: #fff; padding: 16px 16px 0">
-      <mix-chart />
-    </el-row>
-    <el-row style="background: #fff; padding: 16px 16px 0; margin-bottom: 32px">
-      <line-chart />
-    </el-row>
+       <h1 style="text-align: center; color: red">{{ $route.meta.title }}</h1>
   </div>
 </template>
 <script>
-import MixChart from "@/components/Charts/MixChart";
-import LineMarker from "@/components/Charts/LineMarker";
-import LineChart from "@/components/Charts/LineChart";
 export default {
   name: "home",
-  components: {
-    MixChart,
-    LineMarker,
-    LineChart,
-  },
+  components: {},
   data() {
     return {};
   },

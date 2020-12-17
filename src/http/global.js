@@ -2,10 +2,11 @@ import axios from 'axios'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 import { Loading, Message } from 'element-ui'
-// import { getToken } from "@/utils/auth";
+import store from '@/store'
 let APIHOST;
 axios.defaults.baseURL = APIHOST
 axios.defaults.timeout = 10000
+// console.log(store.state.account)
 // console.log(process.env.NODE_ENV)
 switch (process.env.NODE_ENV) {
   // 开发环境
@@ -90,17 +91,13 @@ axios.interceptors.response.use(
 
 // API method 封装
 export const request = function (method, url, params) {
-  // var token = "";
-  // if (getToken("userInfo") !== undefined) {
-  //   token = JSON.parse(getToken("userInfo")).api_token;
-  // }
   const config = {
     baseURL: APIHOST,
     method: method.toLocaleUpperCase() || 'GET',
     url,
     headers: {
       'Content-Type': 'application/json',
-      // Authorization: `Bearer ${token}`
+      // Authorization: store.state.account.token ? `Bearer ${store.state.account.token}` : ""
     }
     // transformRequest: [
     //   data =>

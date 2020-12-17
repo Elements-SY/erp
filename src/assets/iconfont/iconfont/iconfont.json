@@ -6,6 +6,48 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "573733",
+      "name": "下载",
+      "font_class": "xiazai1",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    },
+    {
+      "icon_id": "8765249",
+      "name": "下载2",
+      "font_class": "xiazai",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
+      "icon_id": "960",
+      "name": "上传",
+      "font_class": "shangchuan",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "16852597",
+      "name": "百度地图",
+      "font_class": "baiduMaps",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
+      "icon_id": "16852598",
+      "name": "高德地图",
+      "font_class": "mapOfGaud",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    },
+    {
+      "icon_id": "15591725",
+      "name": "vuejs-fill",
+      "font_class": "vuejs-fill",
+      "unicode": "e9c1",
+      "unicode_decimal": 59841
+    },
+    {
       "icon_id": "46298",
       "name": "setting",
       "font_class": "setting",
@@ -977,13 +1019,6 @@
       "font_class": "xiaochengxu",
       "unicode": "e617",
       "unicode_decimal": 58903
-    },
-    {
-      "icon_id": "18427876",
-      "name": "Cloud download filled icon",
-      "font_class": "Clouddownloadfilledicon",
-      "unicode": "e64b",
-      "unicode_decimal": 58955
     }
   ]
 }

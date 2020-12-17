@@ -67,7 +67,7 @@
                   <div class="team_list">
                     <div class="team_user">
                       <div class="team_logo">
-                        <img src="../../assets/images/team1.jpg" alt="" />
+                        <img src="@/assets/images/team1.jpg" alt="" />
                       </div>
                       <div class="team_info">
                         <h4>Jane Watson</h4>
@@ -83,7 +83,7 @@
                   <div class="team_list">
                     <div class="team_user">
                       <div class="team_logo">
-                        <img src="../../assets/images/team2.jpg" alt="" />
+                        <img src="@/assets/images/team2.jpg" alt="" />
                       </div>
                       <div class="team_info">
                         <h4>Jane Watson</h4>
@@ -99,7 +99,7 @@
                   <div class="team_list">
                     <div class="team_user">
                       <div class="team_logo">
-                        <img src="../../assets/images/team3.jpg" alt="" />
+                        <img src="@/assets/images/team3.jpg" alt="" />
                       </div>
                       <div class="team_info">
                         <h4>Jane Watson</h4>
@@ -115,7 +115,7 @@
                   <div class="team_list">
                     <div class="team_user">
                       <div class="team_logo">
-                        <img src="../../assets/images/team4.jpg" alt="" />
+                        <img src="@/assets/images/team4.jpg" alt="" />
                       </div>
                       <div class="team_info">
                         <h4>Jane Watson</h4>

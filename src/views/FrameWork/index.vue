@@ -18,12 +18,12 @@
 </template>
 
 <script>
-import { navData } from "./data/index";
+import { navData } from "./data/index"; // Vue框架知识点path链接集合
 export default {
   name: "FrameWork_index",
   data() {
     return {
-      vueChapter: navData,
+      vueChapter: navData, // Vue框架知识点path链接集合
     };
   },
   created() {

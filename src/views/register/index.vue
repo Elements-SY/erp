@@ -3,7 +3,7 @@
     <!-- video full background -->
     <div class="video_wrap">
       <video class="video" autoplay loop muted>
-        <source src="../../assets/video/video.mp4" type="video/mp4" />
+        <source src="@/assets/images/bg/video.mp4" type="video/mp4" />
       </video>
     </div>
     <!-- user account form -->

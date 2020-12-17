@@ -1,8 +1,9 @@
 import axios from 'axios'
-// import { getToken } from "@/utils/auth";
 let APIHOST;
 axios.defaults.baseURL = APIHOST
 axios.defaults.timeout = 10000
+import store from '@/store'
+// console.log(store.state.account)
 // console.log(process.env.NODE_ENV)
 switch (process.env.NODE_ENV) {
   // 开发环境
@@ -21,17 +22,13 @@ switch (process.env.NODE_ENV) {
 
 // API method 封装
 export const request = function (method, url, params) {
-  // var token = "";
-  // if (getToken("userInfo") !== undefined) {
-  //   token = JSON.parse(getToken("userInfo")).api_token;
-  // }
   const config = {
     baseURL: APIHOST,
     method: method.toLocaleUpperCase() || 'GET',
     url,
     headers: {
       'Content-Type': 'application/json',
-      // Authorization: `Bearer ${token}`
+      // Authorization: store.state.account.token ? `Bearer ${store.state.account.token}` : ""
     }
     // transformRequest: [
     //   data =>

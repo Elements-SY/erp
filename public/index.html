@@ -10,10 +10,7 @@
     <%= htmlWebpackPlugin.options.title %>
   </title>
   <style>
-    body {
-      padding: 0;
-      margin: 0;
-    }
+    body {padding: 0;margin: 0;}
   </style>
 </head>
 
@@ -23,7 +20,12 @@
         Please enable it to continue.</strong>
   </noscript>
   <div id="app"></div>
-  <!-- built files will be auto injected -->
+
+  <script src="./loadMap.js"></script>
+  <script>
+    loadMap.baiDu() // 引入加载百度地图key
+    loadMap.gaoDe() // 引入加载高德地图key
+  </script>
 </body>
 
 </html>
