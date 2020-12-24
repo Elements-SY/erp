@@ -5,18 +5,13 @@
 </template>
 
 <script>
-let map = null;
 export default {
   name: "babel_index",
   data() {
     return {};
   },
   created() {},
-  mounted() {
-  },
-  methods: {
-
-  },
+  methods: {},
 };
 </script>
 

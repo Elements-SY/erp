@@ -1,12 +1,16 @@
 <template>
   <div class="home_container">
        <h1 style="text-align: center; color: red">{{ $route.meta.title }}</h1>
+       <search />
   </div>
 </template>
 <script>
+import search from '@/components/search'
 export default {
   name: "home",
-  components: {},
+  components: {
+    search
+  },
   data() {
     return {};
   },

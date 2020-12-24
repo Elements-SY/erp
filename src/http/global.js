@@ -6,23 +6,20 @@ import store from '@/store'
 let APIHOST;
 axios.defaults.baseURL = APIHOST
 axios.defaults.timeout = 10000
-// console.log(store.state.account)
-// console.log(process.env.NODE_ENV)
 switch (process.env.NODE_ENV) {
   // 开发环境
   case 'development':
-    APIHOST = '/api'
+    APIHOST = '/dev-api'
     break
   // 测试环境
   case 'testing':
-    APIHOST = 'https://api.6vzz.com/'
+    APIHOST = '/test-api'
     break
   // 生产环境
   default:
-    APIHOST = 'https://api.6vzz.com/'
+    APIHOST = '/prod-api'
     break
 }
-// console.log(APIHOST)
 const options = {
   text: 'Loading. . .'
 }
@@ -55,7 +52,6 @@ axios.interceptors.response.use(
   },
   error => {
     NProgress.done()
-    // console.log('状态码', error.response.status);
     if (error && error.response.status) {
       switch (error.response.status) {
         case 400:
@@ -97,7 +93,7 @@ export const request = function (method, url, params) {
     url,
     headers: {
       'Content-Type': 'application/json',
-      // Authorization: store.state.account.token ? `Bearer ${store.state.account.token}` : ""
+      Authorization: store.state.account.token ? `Bearer ${store.state.account.token}` : ""
     }
     // transformRequest: [
     //   data =>

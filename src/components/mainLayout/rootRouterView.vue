@@ -1,6 +1,10 @@
 <template>
   <div class="root_router_view">
-    <router-view />
+    <transition name="fade-transform" mode="out-in">
+      <keep-alive>
+        <router-view />
+      </keep-alive>
+    </transition>
   </div>
 </template>
 

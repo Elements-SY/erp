@@ -25,9 +25,6 @@
 
 <script>
 import tableData from "../data";
-// XLSX 使用文档链接入口：https://docs.sheetjs.com/
-import XLSX from "xlsx";
-import { readFile } from "@/utils";
 export default {
   name: "export",
   data() {

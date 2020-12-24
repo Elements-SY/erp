@@ -51,4 +51,7 @@ export default {
     display: none;
   }
 }
+span {
+  padding-left: 5px;
+}
 </style>

@@ -326,8 +326,8 @@ export function createUniqueString() {
 }
 
 /**
- * Check if an element has a class
- * @param {HTMLElement} elm
+ * @desc 获取DOM元素是否存在该class 类名，如果有返回当前class类名
+ * @param {HTMLElement} elm 
  * @param {string} cls
  * @returns {boolean}
  */
@@ -336,7 +336,7 @@ export function hasClass(ele, cls) {
 }
 
 /**
- * Add class to element
+ * @desc 添加DOM class
  * @param {HTMLElement} elm
  * @param {string} cls
  */
@@ -345,7 +345,7 @@ export function addClass(ele, cls) {
 }
 
 /**
- * Remove class from element
+ * @desc 删除DOM class
  * @param {HTMLElement} elm
  * @param {string} cls
  */
@@ -356,8 +356,13 @@ export function removeClass(ele, cls) {
   }
 }
 
-
-// 容错处理
+/**
+ * @desc 容错处理
+ * @param {Array} arr
+ * @param {String} str
+ * @param {JSON} json
+ * @return {Number} value
+ */
 export const faultTolerance = {
   isArr: function (arr) {
     if (arr !== null && arr.length) {
@@ -387,7 +392,11 @@ export const faultTolerance = {
   }
 }
 
-/* 读取文件 */
+/**
+ * @desc 1.接收一个二进制数据; 2.读取文件 
+ * @param {binary} file
+ * @return {Array} Array
+ */
 export const readFile = (file) => {
   // XLSX 使用文档链接入口：https://docs.sheetjs.com/
   const XLSX = require('xlsx')
@@ -405,5 +414,24 @@ export const readFile = (file) => {
       const data = XLSX.utils.sheet_to_json(workSheet); // 转换成json表格形式
       resolve(data)
     }
+  })
+}
+
+/**
+ * @desc 1压缩上传文件; 2.接收一个二进制数据
+ * @param {binary} file
+ * @return {binary} file
+ */
+export const lrzFile = (file) => {
+  const lrz = require('lrz')
+  return new Promise((resolve, reject) => {
+    var blobUrl = URL.createObjectURL(file, { quality: 0 });
+    // 压缩上传文件
+   lrz(blobUrl).then(rst => {
+      const files = new File([rst.file], file.name, { type: rst.file.type });
+      resolve(files)
+    }).catch(err => {
+      reject(err)
+    })
   })
 }

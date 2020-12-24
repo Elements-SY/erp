@@ -36,6 +36,7 @@ export default [
             component: () => import('@/views/FrameWork/vue3'),
             meta: {
                request: true,
+               keepAlive: "true", // 缓存该组件
                title: 'Vue3'
             }, 
          },
@@ -145,6 +146,15 @@ export default [
             meta: {
                request: true,
                title: 'vuex'
+            }
+         },
+         {
+            path: '/FrameWork/vue/scoped',
+            name: 'scoped',
+            component: () => import('@/views/FrameWork/vue/scoped'),
+            meta: {
+               request: true,
+               title: 'Scoped CSS'
             }
          },
       ]

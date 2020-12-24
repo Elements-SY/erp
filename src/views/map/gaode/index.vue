@@ -1,29 +1,27 @@
 <template>
   <div class="gaode-map_container">
-    <div class="gaode_map" ref="map"></div>
+    <div id="amapContainer" class="amap-demo"></div>
   </div>
 </template>
 
 <script>
+// NPM 方式
+import { lazyAMapApiLoaderInstance } from "vue-amap";
 export default {
   name: "gaode-map",
   data() {
     return {};
   },
-  created() {},
-  mounted() {
-    this.initMap();
+  created() {
+    this.initMap()
   },
   methods: {
     initMap() {
-      map = new AMap.Map(this.$refs.map, {
-        zoom: 12,
-        center: [116.39, 39.9],
-      });
-      AMap.plugin("AMap.ToolBar", function () {
-        //异步加载插件
-        var toolbar = new AMap.ToolBar();
-        map.addControl(toolbar);
+      lazyAMapApiLoaderInstance.load().then(() => {
+        // your code ...
+        this.map = new AMap.Map("amapContainer", {
+          center: new AMap.LngLat(121.59996, 31.197646),
+        });
       });
     },
   },
@@ -31,7 +29,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.gaode_map {
-  height: 600px;
+#amapContainer {
+  height: 300px;
 }
 </style>
