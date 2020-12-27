@@ -13,11 +13,11 @@ switch (process.env.NODE_ENV) {
     break
   // 测试环境
   case 'testing':
-    APIHOST = '/test-api'
+    APIHOST = 'https://api.6vzz.com'
     break
   // 生产环境
   default:
-    APIHOST = '/prod-api'
+    APIHOST = 'https://api.6vzz.com'
     break
 }
 const options = {
