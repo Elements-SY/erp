@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
-import Element from 'element-ui'
-import 'element-ui/lib/theme-chalk/index.css'
+import ElementPlus from 'element-plus';
+import 'element-plus/lib/theme-chalk/index.css';
 import './assets/iconfont/index.css'
 import './styles/public/common.scss'
 import App from './App.vue'
@@ -10,6 +10,6 @@ Mock.init()
 import store from './store'
 import './permission' // 路由权限
 
-createApp(App).use(router).use(Element).use(store).mount('#app')
+createApp(App).use(router).use(ElementPlus).use(store).mount('#app')
 
 
