@@ -1,10 +1,12 @@
 <template>
   <div class="root_router_view">
-    <transition name="fade-transform" mode="out-in">
-      <keep-alive>
-        <router-view />
-      </keep-alive>
-    </transition>
+    <router-view v-slot="{ Component }">
+      <transition name="router-fade" mode="out-in">
+        <keep-alive>
+          <component :is="Component" />
+        </keep-alive>
+      </transition>
+    </router-view>
   </div>
 </template>
 
