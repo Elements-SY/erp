@@ -33,6 +33,15 @@ module.exports = {
     },
     requireModuleExtension: true
   },
+  configureWebpack: {
+    module: {
+      rules: [{
+        test: /\.mjs$/,
+        include: /node_modules/,
+        type: "javascript/auto"
+      }]
+    },
+  },
   // support all api; link: https://www.webpackjs.com/configuration/dev-server/
   devServer: {
     proxy: {
@@ -52,7 +61,7 @@ module.exports = {
     open: true,
     host: "localhost",
     port: "8080",
-    hotOnly: true, 
-    overlay: true, 
+    hotOnly: true,
+    overlay: true,
   }
 }

@@ -4,7 +4,7 @@ import mainLayout from '@/components/mainLayout'
 
 // publicRouter
 export default [
-    { path: '*', redirect: '/404', hidden: true },
+    { path: '/:pathMatch(.*)*', redirect: '/404', hidden: true },
     {
         path: '/login',
         name: 'login',
